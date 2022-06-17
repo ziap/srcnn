@@ -4,7 +4,7 @@ const input_menu = document.querySelector('#input-menu')
 
 const worker = new Worker(new URL('./worker.js', import.meta.url))
 
-function bicubic_upsampling(image, scale=2) {
+function bicubic_upsampling(image, scale=4) {
     const canvas = document.createElement('canvas')
     const ctx = canvas.getContext('2d')
     canvas.width = image.width * scale
