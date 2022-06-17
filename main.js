@@ -21,13 +21,18 @@ function render(image_data) {
     canvas.height = image_data.height
     ctx.putImageData(image_data, 0, 0)
     
-    return canvas.toDataURL('image/jpeg', 1.0)
+    return canvas.toBlob(blob => {
+        const anchor = document.createElement('a')
+        anchor.href = URL.createObjectURL(blob)
+        anchor.click()
+        URL.revokeObjectURL(blob)
+    },'image/jpeg', 1.0)
 }
 
 worker.addEventListener('message', e => {
     const { inp_data, out_data } = e.data
 
-    location.href = render(out_data)
+    render(out_data)
 })
 
 input.addEventListener('change', e => {
