@@ -1,0 +1,27 @@
+{
+  "name": "srcnn",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.9.9"
+  },
+  "dependencies": {
+    "@tensorflow/tfjs": "^3.18.0",
+    "@tensorflow/tfjs-backend-wasm": "^3.18.0"
+  },
+  "prettier": {
+    "trailingComma": "none",
+    "tabWidth": 4,
+    "useTabs": false,
+    "semi": false,
+    "singleQuote": true,
+    "bracketSameLine": true,
+    "arrowParens": "avoid",
+    "printWidth": 120
+  }
+}
