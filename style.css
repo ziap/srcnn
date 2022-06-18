@@ -74,12 +74,18 @@ h1 {
     text-align: center;
 }
 
-body {
+#input-menu {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    color: #fff;
     align-items: center;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
     background: #870000; /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #190a05, #870000); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
@@ -87,4 +93,24 @@ body {
         #190a05,
         #870000
     ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.progress {
+    height: 10px;
+    width: 100%;
+}
+
+#bar {
+    width: 0%;
+    height: 100%;
+    background: #d9a7c7; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #fffcdc, #d9a7c7); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+        to left,
+        #fffcdc,
+        #d9a7c7
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 5px 5px 20px #d9a7c7, -5px -5px 20px #d9a7c7;
+    border-top-right-radius: 100vmax;
+    border-bottom-right-radius: 100vmax;
 }

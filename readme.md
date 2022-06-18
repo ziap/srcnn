@@ -33,8 +33,10 @@ To train the model with your own data and settings use this [Notebook](https://c
 
 ## Credit
 
-- Bùi Huy Giáp
-- Vũ Uy
+This project is created by
+
+- [Bùi Huy Giáp](https://github.com/ziap)
+- [Vũ Uy](https://github.com/abaccc)
 
 ## License
 

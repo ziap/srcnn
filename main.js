@@ -1,8 +1,11 @@
+import { make_progress_bar } from "./progressbar"
+
 const input = document.querySelector('#file-input')
-const output = document.querySelector('#output')
 const input_menu = document.querySelector('#input-menu')
 
-const worker = new Worker(new URL('./worker.js', import.meta.url))
+const worker = new Worker(new URL('./worker.js', import.meta.url), {
+    type: 'module'
+})
 
 function bicubic_upsampling(image, scale=2) {
     const canvas = document.createElement('canvas')
@@ -44,5 +47,6 @@ input.addEventListener('change', e => {
         img.src = reader.result
     })
     reader.readAsDataURL(e.target.files[0])
+    make_progress_bar(10)
     input_menu.remove()
 })
